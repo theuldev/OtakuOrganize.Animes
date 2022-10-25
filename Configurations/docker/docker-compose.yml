@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  db: 
+    image: postgres
+    container_name: animes-container
+    ports:
+      - 5431:5432
+    restart: always
+    environment: 
+      POSTGRES_PASSWORD: mathemacr

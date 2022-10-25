@@ -1,0 +1,333 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/AnimesControl.Api.csproj": {}
+  },
+  "projects": {
+    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/AnimesControl.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/AnimesControl.Api.csproj",
+        "projectName": "AnimesControl.Api",
+        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/AnimesControl.Api.csproj",
+        "packagesPath": "/home/lstheus/.nuget/packages/",
+        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj": {
+                "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj"
+              },
+              "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj": {
+                "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj"
+              },
+              "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj": {
+                "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj",
+        "projectName": "AnimesControl.Application",
+        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj",
+        "packagesPath": "/home/lstheus/.nuget/packages/",
+        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj",
+        "projectName": "AnimesControl.Domain",
+        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj",
+        "packagesPath": "/home/lstheus/.nuget/packages/",
+        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj",
+        "projectName": "AnimesControl.Infra",
+        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj",
+        "packagesPath": "/home/lstheus/.nuget/packages/",
+        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj": {
+                "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

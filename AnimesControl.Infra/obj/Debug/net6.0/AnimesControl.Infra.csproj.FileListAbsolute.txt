@@ -1,0 +1,17 @@
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/bin/Debug/net6.0/AnimesControl.Infra.deps.json
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/bin/Debug/net6.0/AnimesControl.Infra.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/bin/Debug/net6.0/ref/AnimesControl.Infra.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/bin/Debug/net6.0/AnimesControl.Infra.pdb
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.csproj.AssemblyReference.cache
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.GeneratedMSBuildEditorConfig.editorconfig
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.AssemblyInfoInputs.cache
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.AssemblyInfo.cs
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.csproj.CoreCompileInputs.cache
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/ref/AnimesControl.Infra.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.pdb
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/bin/Debug/net6.0/AnimesControl.Domain.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/bin/Debug/net6.0/AnimesControl.Domain.pdb
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.csproj.CopyComplete
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/bin/Debug/net6.0/AnimesControl.Infra.runtimeconfig.json
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/Debug/net6.0/AnimesControl.Infra.genruntimeconfig.cache

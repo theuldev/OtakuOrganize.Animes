@@ -1,0 +1,14 @@
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/bin/Debug/net6.0/AnimesControl.Domain.deps.json
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/bin/Debug/net6.0/AnimesControl.Domain.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/bin/Debug/net6.0/ref/AnimesControl.Domain.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/bin/Debug/net6.0/AnimesControl.Domain.pdb
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.csproj.AssemblyReference.cache
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.AssemblyInfoInputs.cache
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.AssemblyInfo.cs
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.csproj.CoreCompileInputs.cache
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/ref/AnimesControl.Domain.dll
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.pdb
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/bin/Debug/net6.0/AnimesControl.Domain.runtimeconfig.json
+/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.genruntimeconfig.cache
