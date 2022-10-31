@@ -23,11 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AnimesControl.Domain\AnimesControl.Domain.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AnimesControl.Application\AnimesControl.Application.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AnimesControl.Infra\AnimesControl.Infra.csproj" />
   </ItemGroup>
 

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj": {}
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj": {}
   },
   "projects": {
-    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj": {
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj",
         "projectName": "AnimesControl.Domain",
-        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj",
-        "packagesPath": "/home/lstheus/.nuget/packages/",
-        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/",
+        "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +71,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -78,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

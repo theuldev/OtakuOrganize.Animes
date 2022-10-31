@@ -31,3 +31,5 @@
 /home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/bin/Debug/net6.0/AnimesControl.Application.pdb
 /home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/bin/Debug/net6.0/AnimesControl.Domain.pdb
 /home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/bin/Debug/net6.0/AnimesControl.Infra.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\AnimesControl.Api.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\AnimesControl.Api.pdb

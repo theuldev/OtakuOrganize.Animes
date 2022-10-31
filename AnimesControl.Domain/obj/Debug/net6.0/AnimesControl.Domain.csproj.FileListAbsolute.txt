@@ -12,3 +12,17 @@
 /home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.pdb
 /home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/bin/Debug/net6.0/AnimesControl.Domain.runtimeconfig.json
 /home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/Debug/net6.0/AnimesControl.Domain.genruntimeconfig.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\bin\Debug\net6.0\AnimesControl.Domain.deps.json
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\bin\Debug\net6.0\AnimesControl.Domain.runtimeconfig.json
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\bin\Debug\net6.0\AnimesControl.Domain.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\bin\Debug\net6.0\AnimesControl.Domain.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\AnimesControl.Domain.csproj.AssemblyReference.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\AnimesControl.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\AnimesControl.Domain.AssemblyInfoInputs.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\AnimesControl.Domain.AssemblyInfo.cs
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\AnimesControl.Domain.csproj.CoreCompileInputs.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\AnimesControl.Domain.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\refint\AnimesControl.Domain.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\AnimesControl.Domain.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\AnimesControl.Domain.genruntimeconfig.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Domain\obj\Debug\net6.0\ref\AnimesControl.Domain.dll
