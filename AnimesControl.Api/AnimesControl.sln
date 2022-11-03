@@ -3,19 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimesControl.Application", "..\AnimesControl.Application\AnimesControl.Application.csproj", "{335988D0-4CB9-4197-8F48-34D3584B8118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimesControl.Application", "..\AnimesControl.Application\AnimesControl.Application.csproj", "{335988D0-4CB9-4197-8F48-34D3584B8118}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimesControl.Infra", "..\AnimesControl.Infra\AnimesControl.Infra.csproj", "{0529E791-8034-4EAB-B8B9-E470075F0FBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimesControl.Infra", "..\AnimesControl.Infra\AnimesControl.Infra.csproj", "{0529E791-8034-4EAB-B8B9-E470075F0FBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimesControl.Domain", "..\AnimesControl.Domain\AnimesControl.Domain.csproj", "{1DE15265-8DE0-40CB-BE55-DF46E33D5DD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimesControl.Domain", "..\AnimesControl.Domain\AnimesControl.Domain.csproj", "{1DE15265-8DE0-40CB-BE55-DF46E33D5DD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimesControl.Api", "AnimesControl.Api.csproj", "{4E61DF78-C981-4C79-B623-8C74B77D3735}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{52BB4063-3F6A-4B04-B741-FB5122469A8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{335988D0-4CB9-4197-8F48-34D3584B8118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +31,19 @@ Global
 		{1DE15265-8DE0-40CB-BE55-DF46E33D5DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DE15265-8DE0-40CB-BE55-DF46E33D5DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DE15265-8DE0-40CB-BE55-DF46E33D5DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E61DF78-C981-4C79-B623-8C74B77D3735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E61DF78-C981-4C79-B623-8C74B77D3735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E61DF78-C981-4C79-B623-8C74B77D3735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E61DF78-C981-4C79-B623-8C74B77D3735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52BB4063-3F6A-4B04-B741-FB5122469A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BB4063-3F6A-4B04-B741-FB5122469A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BB4063-3F6A-4B04-B741-FB5122469A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BB4063-3F6A-4B04-B741-FB5122469A8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD2D708E-6531-48B9-86BF-67370116E992}
 	EndGlobalSection
 EndGlobal

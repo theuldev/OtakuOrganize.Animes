@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  animescontrol.api:
+    image: ${DOCKER_REGISTRY-}animescontrolapi
+    build:
+      context: .
+      dockerfile: Dockerfile

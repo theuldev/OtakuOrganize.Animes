@@ -1,39 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/AnimesControl.Api.csproj": {}
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Api\\AnimesControl.Api.csproj": {}
   },
   "projects": {
-    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/AnimesControl.Api.csproj": {
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Api\\AnimesControl.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/AnimesControl.Api.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Api\\AnimesControl.Api.csproj",
         "projectName": "AnimesControl.Api",
-        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/AnimesControl.Api.csproj",
-        "packagesPath": "/home/lstheus/.nuget/packages/",
-        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Api/obj/",
+        "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Api\\AnimesControl.Api.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj": {
-                "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj"
+              "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Application\\AnimesControl.Application.csproj": {
+                "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Application\\AnimesControl.Application.csproj"
               },
-              "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj": {
-                "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj"
+              "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj": {
+                "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj"
               },
-              "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj": {
-                "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj"
+              "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj": {
+                "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj"
               }
             }
           }
@@ -83,7 +85,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -95,26 +98,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj": {
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Application\\AnimesControl.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Application\\AnimesControl.Application.csproj",
         "projectName": "AnimesControl.Application",
-        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/AnimesControl.Application.csproj",
-        "packagesPath": "/home/lstheus/.nuget/packages/",
-        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Application/obj/",
+        "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Application\\AnimesControl.Application.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -133,6 +138,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -160,7 +169,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -169,26 +179,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj": {
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj",
         "projectName": "AnimesControl.Domain",
-        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj",
-        "packagesPath": "/home/lstheus/.nuget/packages/",
-        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/obj/",
+        "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -207,6 +219,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -234,7 +250,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -243,34 +260,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj": {
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj",
         "projectName": "AnimesControl.Infra",
-        "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/AnimesControl.Infra.csproj",
-        "packagesPath": "/home/lstheus/.nuget/packages/",
-        "outputPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Infra/obj/",
+        "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lstheus/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj": {
-                "projectPath": "/home/lstheus/Documentos/repos/lstheus/AnimesControl/AnimesControl.Domain/AnimesControl.Domain.csproj"
+              "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj": {
+                "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Domain\\AnimesControl.Domain.csproj"
               }
             }
           }
@@ -285,6 +304,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -316,7 +339,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -325,7 +349,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
