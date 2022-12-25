@@ -1,35 +1,54 @@
-
-using AnimesControl.Domain.Interfaces.Repository;
-using AnimesControl.Domain.Models;
+﻿using AnimesControl.Core.Interfaces.Repostories;
+using AnimesControl.Core.Entities;
+using AnimesControl.Infra.Context;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.Contracts;
+using System.Reflection.Metadata.Ecma335;
 
 namespace AnimesControl.Infra.Repository
 
 {
     public class AnimeRepository : IAnimeRepository
     {
-        public void DeleteAnime(AnimeDetail animeDetails)
+        private readonly AnimeContext context;
+
+        public AnimeRepository(AnimeContext context)
         {
-            throw new NotImplementedException();
+            this.context = context; 
         }
 
-        public List<AnimeDetail> GetAnime()
+        public void DeleteAnime(Anime animeDetails)
         {
-            throw new NotImplementedException();
+            
+            context.Remove(animeDetails);
+            context.SaveChanges();
         }
 
-        public AnimeDetail GetByIdAnimeDetails(int id)
+        public List<Anime> GetAnimes()
         {
-            throw new NotImplementedException();
+
+            return context.Anime.ToList();
         }
 
-        public void PostAnime(AnimeDetail animeDetails)
+        public Anime GetByIdAnimeDetails(int? id)
         {
-            throw new NotImplementedException();
+            var anime = context.Anime.AsNoTracking().FirstOrDefault(e => e.Id == id);
+            if (anime == null) throw new NullReferenceException();
+            return anime;
         }
 
-        public void PutAnime(int id, AnimeDetail animeDetails)
+        public void PostAnime(Anime animeDetails)
         {
-            throw new NotImplementedException();
+            context.Anime.Add(animeDetails);
+            context.SaveChanges();
+            
+        }
+
+        public void PutAnime(Anime animeDetails)
+        {
+        
+            context.Entry(animeDetails).State = EntityState.Modified;
+            context.SaveChanges();
         }
     }
 }

@@ -1,0 +1,27 @@
+version: '3.9'  
+networks:
+    postgresNET:
+services:
+  anime-postgres: 
+    image: postgres
+    networks:
+      - postgresNET
+    ports:
+      - 5432:5432
+    restart: always
+    environment: 
+      POSTGRES_DB: "animedatabase"
+      POSTGRES_USER: "mathemac"
+      POSTGRES_PASSWORD: "mathemac"
+
+  app: 
+    container_name: anime-api
+    depends_on: 
+      - anime-postgres
+    networks:
+      - postgresNET
+    build: 
+      context: .
+      dockerfile: /AnimesControl.Api/Dockerfile
+    ports: 
+      - 8080:80

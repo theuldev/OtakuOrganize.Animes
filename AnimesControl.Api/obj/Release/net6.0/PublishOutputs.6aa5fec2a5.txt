@@ -1,0 +1,12 @@
+C:\app\publish\appsettings.Development.json
+C:\app\publish\appsettings.json
+C:\app\publish\AnimesControl.Api.dll
+C:\app\publish\AnimesControl.Api.deps.json
+C:\app\publish\AnimesControl.Api.runtimeconfig.json
+C:\app\publish\AnimesControl.Api.pdb
+C:\app\publish\Microsoft.OpenApi.dll
+C:\app\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\app\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\app\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\app\publish\AnimesControl.Domain.dll
+C:\app\publish\AnimesControl.Domain.pdb
