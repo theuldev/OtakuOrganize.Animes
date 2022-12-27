@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimesControl.Infra.Repository
+namespace AnimesControl.Infra.Repositories
 {
     public class Anime_CustomerRepository : IAnime_CustomerRepository
     {
@@ -18,29 +18,24 @@ namespace AnimesControl.Infra.Repository
         {
             context = _context;
         }
-        public void AddAnime_Customer(Anime anime, Customer customer)
+        public void AddAnime_Customer(Anime_Customer anime_Customer)
         {
-            var model = context.Anime_Customer.AsNoTracking().Where(c => c.AnimeId == anime.Id && c.CustomerId == customer.Id).FirstOrDefault();
+            var model = context.Anime_Customer.AsNoTracking().Where(c => c.AnimeId == anime_Customer.AnimeId && c.CustomerId == anime_Customer.CustomerId).FirstOrDefault();
             if (model != null)
             {
                 throw new ArgumentException();
             }
-            var anime_customer = new Anime_Customer()
-            {
-                AnimeId = anime.Id,
-                CustomerId = customer.Id
-            };
 
-           
-           
-            context.Anime_Customer.Add(anime_customer);
+
+
+            context.Anime_Customer.Add(anime_Customer);
             context.SaveChanges();
 
         }
         public List<Anime_Customer> GetCustomerWithAnimeId(int id)
         {
-           var animes = context.Anime_Customer.AsNoTracking().Where(a => a.AnimeId == id).ToList();
-            
+            var animes = context.Anime_Customer.AsNoTracking().Where(a => a.AnimeId == id).ToList();
+
             return animes;
         }
         public List<Anime_Customer> GetAnimeWithCustomerId(int id)

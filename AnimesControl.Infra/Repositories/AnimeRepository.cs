@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.Contracts;
 using System.Reflection.Metadata.Ecma335;
 
-namespace AnimesControl.Infra.Repository
+namespace AnimesControl.Infra.Repositories
 
 {
     public class AnimeRepository : IAnimeRepository

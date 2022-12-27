@@ -1,4 +1,5 @@
 ﻿using AnimesControl.Application.Models.InputModels;
+using AnimesControl.Application.Models.ViewModels;
 using AnimesControl.Core.Entities;
 using AutoMapper;
 using System;
@@ -14,6 +15,7 @@ namespace AnimesControl.Application.Mapper
         public CustomerProfile()
         {
             CreateMap<CustomerInputModel, Customer>();
+            CreateMap<Customer, CustomerViewModel>();
         }
     }
 }

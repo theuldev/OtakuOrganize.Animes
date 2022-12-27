@@ -1,4 +1,5 @@
 ﻿using AnimesControl.Application.Models.InputModels;
+using AnimesControl.Application.Models.ViewModels;
 using AnimesControl.Core.Entities;
 using AutoMapper;
 using System;
@@ -14,7 +15,8 @@ namespace AnimesControl.Application.Mapper
         public AnimeProfile()
         {
             CreateMap<AnimeInputModel, Anime>();
+            CreateMap<Anime, AnimeViewModel>();
         }
-      
+
     }
 }

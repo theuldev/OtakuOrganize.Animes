@@ -2,9 +2,8 @@
 using AnimesControl.Application.Validations;
 using AnimesControl.Core.Interfaces.Repostories;
 using AnimesControl.Application.Common.Interfaces.Services;
-using AnimesControl.Domain.Services;
 using AnimesControl.Infra.Context;
-using AnimesControl.Infra.Repository;
+using AnimesControl.Infra.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +14,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using AnimesControl.Application.Services;
 
 namespace AnimesControl.Infra.Extensions
 {

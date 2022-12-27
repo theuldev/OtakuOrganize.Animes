@@ -5,8 +5,9 @@ using System.Net.Http.Headers;
 using System.Diagnostics;
 using AutoMapper;
 using AnimesControl.Application.Models.InputModels;
+using AnimesControl.Application.Models.ViewModels;
 
-namespace AnimesControl.Domain.Services
+namespace AnimesControl.Application.Services
 {
     public class CustomerService : ICustomerService
     {
@@ -26,34 +27,36 @@ namespace AnimesControl.Domain.Services
             repository.DeleteCustomer(customer);
         }
 
-        public Customer GetByIdCustomer(int id)
+        public CustomerViewModel GetByIdCustomer(int id)
         {
             if (id == null) throw new NullReferenceException();
             var customer = repository.GetByIdCustomer(id);
-            return customer;
+            var customerMap = mapper.Map<CustomerViewModel>(customer);
+            return customerMap;
 
 
         }
 
-        public IEnumerable<Customer> GetCustomers()
+        public IEnumerable<CustomerViewModel> GetCustomers()
         {
-           IEnumerable<Customer> customers = repository.GetCustomers();
+            IEnumerable<Customer> customers = repository.GetCustomers();
             if (customers.Count() <= 0) throw new NullReferenceException();
-            return customers;
+            var customersMap = mapper.Map<IEnumerable<CustomerViewModel>>(customers);
+            return customersMap;
         }
 
         public void PostCustomer(CustomerInputModel customer)
         {
-            if(customer == null) throw new NullReferenceException();
-            var modelMap = mapper.Map<Customer>(customer);
-            repository.PostCustomer(modelMap);
+            if (customer == null) throw new NullReferenceException();
+            var customersMap = mapper.Map<Customer>(customer);
+            repository.PostCustomer(customersMap);
         }
 
         public void PutCustomer(int id, CustomerInputModel customer)
         {
             if (id == null || customer == null) throw new NullReferenceException();
-            var modelMap = mapper.Map<Customer>(customer);
-            repository.PutCustomer(modelMap);
+            var customersMap = mapper.Map<Customer>(customer);
+            repository.PutCustomer(customersMap);
         }
     }
 }

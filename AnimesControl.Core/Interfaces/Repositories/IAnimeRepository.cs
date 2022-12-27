@@ -8,7 +8,6 @@ namespace AnimesControl.Core.Interfaces.Repostories
 {
     public interface IAnimeRepository
     {
-
         List<Anime> GetAnimes();
         Anime GetByIdAnimeDetails(int? id);
         void PostAnime(Anime animeDetails);

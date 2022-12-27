@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using AnimesControl.Application.Models.InputModels;
-using AnimesControl.Domain.Services;
+using AnimesControl.Application.Services;
 using AnimesControl.Application.Common.Interfaces.Services;
 
 namespace AnimesControl.Api.Controllers
@@ -14,7 +14,7 @@ namespace AnimesControl.Api.Controllers
         private readonly ICustomerService customerservice;
 
         IAnime_CustomerService anime_CustomerService;
-        public CustomersController(ICustomerService _customerservice, IMapper _mapper, IAnime_CustomerService _anime_CustomerService)
+        public CustomersController(ICustomerService _customerservice, IAnime_CustomerService _anime_CustomerService)
         {
             customerservice = _customerservice;
             anime_CustomerService = _anime_CustomerService;
@@ -144,7 +144,7 @@ namespace AnimesControl.Api.Controllers
             }
             catch (NullReferenceException ex)
             {
-                return BadRequest("Objeto não encontrado " + ex.Message);
+                return BadRequest("Nenhum anime foi encontrado: " + ex.Message);
             }
             catch (Exception ex)
             {
@@ -163,7 +163,7 @@ namespace AnimesControl.Api.Controllers
             }
             catch (NullReferenceException ex)
             {
-                return BadRequest   ("Objeto não encontrado " + ex.Message);
+                return BadRequest("Objeto não encontrado " + ex.Message);
             }
             catch (Exception ex)
             {

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimesControl.Infra.Repository
+namespace AnimesControl.Infra.Repositories
 {
     public class CustomerRepository : ICustomerRepository
     {

@@ -1,23 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimesControl.Core.Entities
+namespace AnimesControl.Application.Models.ViewModels
 {
-    public class Anime
+    public class AnimeViewModel
     {
-
         public int Id { get; set; }
         public string Title { get; set; }
         public string Details { get; set; }
         public int Category { get; set; }
         public DateTime PostAt { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public List<Anime_Customer> Anime_Customer { get; set; }
-
-
-
     }
 }

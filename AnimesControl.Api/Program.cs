@@ -1,10 +1,10 @@
 using AnimesControl.Application.Mapper;
 using AnimesControl.Core.Interfaces.Repostories;
 using AnimesControl.Application.Common.Interfaces.Services;
-using AnimesControl.Domain.Services;
+using AnimesControl.Application.Services;
 using AnimesControl.Infra.Context;
 using AnimesControl.Infra.Extensions;
-using AnimesControl.Infra.Repository;
+using AnimesControl.Infra.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System;

@@ -10,3 +10,15 @@ C:\Users\mathe\source\repos\AnimesControl\AnimesControl.Core\obj\Debug\net6.0\An
 C:\Users\mathe\source\repos\AnimesControl\AnimesControl.Core\obj\Debug\net6.0\refint\AnimesControl.Core.dll
 C:\Users\mathe\source\repos\AnimesControl\AnimesControl.Core\obj\Debug\net6.0\AnimesControl.Core.pdb
 C:\Users\mathe\source\repos\AnimesControl\AnimesControl.Core\obj\Debug\net6.0\ref\AnimesControl.Core.dll
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\bin\Debug\net6.0\AnimesControl.Core.deps.json
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\bin\Debug\net6.0\AnimesControl.Core.dll
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\bin\Debug\net6.0\AnimesControl.Core.pdb
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\AnimesControl.Core.csproj.AssemblyReference.cache
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\AnimesControl.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\AnimesControl.Core.AssemblyInfoInputs.cache
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\AnimesControl.Core.AssemblyInfo.cs
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\AnimesControl.Core.csproj.CoreCompileInputs.cache
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\AnimesControl.Core.dll
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\refint\AnimesControl.Core.dll
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\AnimesControl.Core.pdb
+C:\Users\mathe\source\AnimesControl.BackEnd\AnimesControl.Core\obj\Debug\net6.0\ref\AnimesControl.Core.dll

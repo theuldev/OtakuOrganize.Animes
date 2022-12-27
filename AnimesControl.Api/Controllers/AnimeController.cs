@@ -23,19 +23,20 @@ namespace AnimesControl.Api.Controllers
         public IActionResult Get()
         {
             try
-            { var clients = animeservice.GetAnimes();
+            {
+                var clients = animeservice.GetAnimes();
                 return Ok(clients);
 
-            } 
+            }
             catch (NullReferenceException ex)
             {
                 return NotFound("Nenhum objeto foi retornado: " + ex.Message);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest("Erro: " + ex.Message);
             }
-           
+
         }
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
@@ -71,23 +72,23 @@ namespace AnimesControl.Api.Controllers
                 return BadRequest("Erro: " + ex);
             }
 
-           
+
         }
         [HttpPut("{id}")]
         public IActionResult Put(int id, AnimeInputModel anime)
         {
             if (id.Equals(anime.Id)) return BadRequest("O id passado não é o mesmo do usuário");
 
-            try 
+            try
             {
                 animeservice.PutAnime(id, anime);
                 return NoContent();
             }
-            catch(NullReferenceException ex)
+            catch (NullReferenceException ex)
             {
                 return NotFound("Ocorreu o seguinte erro na validação das informações: " + ex.Message);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest("Erro: " + ex.Message);
             }
@@ -110,16 +111,21 @@ namespace AnimesControl.Api.Controllers
             }
         }
         [HttpGet("GetAnimeWithCustomerId/{id}")]
-        public IActionResult GetAnimeWithCustomerId(int id) {
+        public IActionResult GetAnimeWithCustomerId(int id)
+        {
 
             try
             {
                 var customers = animecustomerService.GetAnimeWithCustomerId(id);
-                return Ok(customers); 
+                return Ok(customers);
             }
-            catch(NullReferenceException ex)
+            catch (NullReferenceException ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest("Nenhum anime foi encontrado: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Ocorreu o seguinte erro" + ex.Message);
             }
         }
 
