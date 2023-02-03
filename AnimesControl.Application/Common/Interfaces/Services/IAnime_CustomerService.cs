@@ -12,8 +12,8 @@ namespace AnimesControl.Application.Common.Interfaces.Services
     public interface IAnime_CustomerService
     {
         public void AddAnimeCustomer(Anime_CustomerInputModel model);
-        public List<Anime_CustomerViewModel> GetCustomerWithAnimeId(int id);
-        public List<Anime_CustomerViewModel> GetAnimeWithCustomerId(int id);
+        public Task<List<Anime_CustomerViewModel>> GetCustomerWithAnimeId(int id);
+        public Task<List<Anime_CustomerViewModel>> GetAnimeWithCustomerId(int id);
         public void RemoveAnimeCustomer(Anime_CustomerInputModel anime_Customer);
     }
 }

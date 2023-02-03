@@ -22,7 +22,7 @@ namespace AnimesControl.Infra.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("AnimesControl.Domain.Entities.Anime", b =>
+            modelBuilder.Entity("AnimesControl.Core.Entities.Anime", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,9 +30,8 @@ namespace AnimesControl.Infra.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("Category")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Details")
                         .IsRequired()
@@ -53,7 +52,7 @@ namespace AnimesControl.Infra.Migrations
                     b.ToTable("tb_animes", (string)null);
                 });
 
-            modelBuilder.Entity("AnimesControl.Domain.Entities.Anime_Customer", b =>
+            modelBuilder.Entity("AnimesControl.Core.Entities.Anime_Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -76,7 +75,7 @@ namespace AnimesControl.Infra.Migrations
                     b.ToTable("Anime_Customer");
                 });
 
-            modelBuilder.Entity("AnimesControl.Domain.Entities.Customer", b =>
+            modelBuilder.Entity("AnimesControl.Core.Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -111,15 +110,15 @@ namespace AnimesControl.Infra.Migrations
                     b.ToTable("tb_customers", (string)null);
                 });
 
-            modelBuilder.Entity("AnimesControl.Domain.Entities.Anime_Customer", b =>
+            modelBuilder.Entity("AnimesControl.Core.Entities.Anime_Customer", b =>
                 {
-                    b.HasOne("AnimesControl.Domain.Entities.Anime", "Anime")
+                    b.HasOne("AnimesControl.Core.Entities.Anime", "Anime")
                         .WithMany("Anime_Customer")
                         .HasForeignKey("AnimeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AnimesControl.Domain.Entities.Customer", "Customer")
+                    b.HasOne("AnimesControl.Core.Entities.Customer", "Customer")
                         .WithMany("Animes_Customer")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -130,12 +129,12 @@ namespace AnimesControl.Infra.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("AnimesControl.Domain.Entities.Anime", b =>
+            modelBuilder.Entity("AnimesControl.Core.Entities.Anime", b =>
                 {
                     b.Navigation("Anime_Customer");
                 });
 
-            modelBuilder.Entity("AnimesControl.Domain.Entities.Customer", b =>
+            modelBuilder.Entity("AnimesControl.Core.Entities.Customer", b =>
                 {
                     b.Navigation("Animes_Customer");
                 });

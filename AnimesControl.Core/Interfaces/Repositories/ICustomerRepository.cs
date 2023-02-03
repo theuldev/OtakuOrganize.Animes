@@ -9,11 +9,13 @@ namespace AnimesControl.Core.Interfaces.Repostories
 {
     public interface ICustomerRepository
     {
-        public List<Customer> GetCustomers();
-        public Customer GetByIdCustomer(int id);
-        public void PostCustomer(Customer customer);
-        public void PutCustomer(Customer customer);
-        public void DeleteCustomer(Customer customer);
-        public void AddAnimeCustomer(Customer customer, Anime anime);
+        Task<List<Customer>> GetCustomers();
+        Task<Customer> GetByIdCustomer(int id);
+        void PostCustomer(Customer customer);
+        void PutCustomer(Customer customer);
+        void DeleteCustomer(Customer customer);
+        void AddAnimeCustomer(Anime_Customer anime_Customer);
+        bool ExistsUsername(string username);
+        bool ExistsEmail(string email);
     }
 }

@@ -5,6 +5,9 @@ using System.ComponentModel;
 using AutoMapper;
 using AnimesControl.Application.Models.InputModels;
 using AnimesControl.Application.Models.ViewModels;
+using AnimesControl.Infra.Caching;
+using Newtonsoft.Json;
+using AnimesControl.Core.Exceptions;
 
 namespace AnimesControl.Application.Services
 {
@@ -12,33 +15,49 @@ namespace AnimesControl.Application.Services
     {
         private readonly IAnimeRepository repository;
         private readonly IMapper mapper;
-        public AnimeService(IAnimeRepository repository, IMapper _mapper)
+        private readonly ICachingService cachingService;
+
+        public AnimeService(IAnimeRepository _repository, IMapper _mapper,ICachingService _cachingService )
         {
             mapper = _mapper;
-            this.repository = repository;
+            repository = _repository;
+            cachingService = _cachingService;
         }
 
-        public void DeleteAnime(int id)
+        public async void DeleteAnime(int id)
         {
-            var anime = repository.GetByIdAnimeDetails(id);
+            var anime = await repository.GetByIdAnimeDetails(id);
             if (anime == null) throw new NullReferenceException();
             repository.DeleteAnime(anime);
         }
 
-        public IEnumerable<AnimeViewModel> GetAnimes()
+        public async Task<IEnumerable<AnimeViewModel>> GetAnimes()
         {
-            var animes = repository.GetAnimes();
+            var animes = await repository.GetAnimes();
             if (animes.Count <= 0) throw new NullReferenceException();
 
-            var animeMap = mapper.Map<List<AnimeViewModel>>(animes);
+            var animeMap = mapper.Map<IEnumerable<AnimeViewModel>>(animes);
 
             return animeMap.OrderBy(sp => sp.Id);
         }
 
-        public AnimeViewModel GetByIdAnimeDetails(int? id)
+        public async Task<AnimeViewModel> GetByIdAnimeDetails(int? id)
         {
             if (id == null) throw new NullReferenceException();
-            var anime = repository.GetByIdAnimeDetails(id);
+
+            Anime anime;
+            var cacheValue = await cachingService.GetAsync(id.ToString());
+            if (!string.IsNullOrWhiteSpace(cacheValue))
+            {
+                anime = JsonConvert.DeserializeObject<Anime>(cacheValue);
+            }
+            else
+            {
+                anime = await repository.GetByIdAnimeDetails(id);
+                await cachingService.SetAsync(id.ToString(),JsonConvert.SerializeObject(anime));
+
+            }
+           
             var animeMap = mapper.Map<AnimeViewModel>(anime);
             return animeMap;
 
@@ -53,13 +72,14 @@ namespace AnimesControl.Application.Services
         }
 
         public void PutAnime(int id, AnimeInputModel animeDetails)
-        {
-            var anime = GetByIdAnimeDetails(id);
+        { 
 
-            if (!anime.Equals(animeDetails)) return;
+            if (!animeDetails.Id.Equals(id)) throw new CredentialsNotEqualsException();
 
+            var exist = repository.AnimeExists(id);
+
+            if (!exist) throw new NullReferenceException();
             var animeMap = mapper.Map<Anime>(animeDetails);
-
             repository.PutAnime(animeMap);
         }
     }

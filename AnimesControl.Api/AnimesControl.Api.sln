@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimesControl.Application",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimesControl.Infra", "..\AnimesControl.Infra\AnimesControl.Infra.csproj", "{BDA09BEA-FA29-4781-84E5-95F979CA01CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimesControl.Core", "..\AnimesControl.Core\AnimesControl.Core.csproj", "{EA9608E5-B4F0-4B2E-B89E-3B3994E2CB94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimesControl.Core", "..\AnimesControl.Core\AnimesControl.Core.csproj", "{EA9608E5-B4F0-4B2E-B89E-3B3994E2CB94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimesControl.Tests", "..\AnimesControl.Tests\AnimesControl.Tests.csproj", "{2F551AE9-3C54-4B06-B427-E1B46424AB05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EA9608E5-B4F0-4B2E-B89E-3B3994E2CB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA9608E5-B4F0-4B2E-B89E-3B3994E2CB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA9608E5-B4F0-4B2E-B89E-3B3994E2CB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F551AE9-3C54-4B06-B427-E1B46424AB05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F551AE9-3C54-4B06-B427-E1B46424AB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F551AE9-3C54-4B06-B427-E1B46424AB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F551AE9-3C54-4B06-B427-E1B46424AB05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

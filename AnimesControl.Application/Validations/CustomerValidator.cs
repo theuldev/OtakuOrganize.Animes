@@ -12,11 +12,7 @@ namespace AnimesControl.Application.Validations
     {
         public CustomerValidator()
         {
-            RuleFor(x => x.Username)
-                .NotNull()
-                .NotEmpty()
-                .MaximumLength(20)
-                .WithMessage("Usuário Inválido");
+
             RuleFor(x => x.Email)
                 .NotNull()
                 .NotEmpty()
@@ -26,17 +22,23 @@ namespace AnimesControl.Application.Validations
                 .NotEmpty()
                 .NotNull()
                 .WithMessage("Data de Nascimento Inválida");
-            RuleFor(x => x.Password)
-                .NotNull()
-                .NotEmpty()
-                .MaximumLength(25)
-                .WithMessage("Senha Inválida");
+
             RuleFor(x => x.Name)
                  .NotNull()
                 .NotEmpty()
                 .MaximumLength(25)
                 .WithMessage("Nome Inválido");
 
+            RuleFor(x => x.Username)
+                .NotNull()
+                .NotEmpty()
+                .MaximumLength(20)
+                .WithMessage("Usuário Inválido");
+            RuleFor(x => x.Password)
+                .NotNull()
+                .NotEmpty()
+                .MaximumLength(25)
+                .WithMessage("Senha Inválida");
         }
     }
 }

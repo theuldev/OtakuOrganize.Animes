@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj": {}
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj": {
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
         "projectName": "AnimesControl.Core",
-        "projectPath": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
+        "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\obj\\",
+        "outputPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj": {
+    "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj",
         "projectName": "AnimesControl.Infra",
-        "projectPath": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj",
+        "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\AnimesControl.Infra.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Infra\\obj\\",
+        "outputPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj": {
-                "projectPath": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj"
+              "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj": {
+                "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj"
               }
             }
           }
@@ -116,6 +116,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.Caching.Redis": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[7.0.2, )"
             },
             "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",

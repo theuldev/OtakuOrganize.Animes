@@ -21,11 +21,11 @@ namespace AnimesControl.Api.Controllers
 
         }
         [HttpGet()]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             try
             {
-                var clients = customerservice.GetCustomers();
+                var clients = await customerservice.GetCustomers();
                 return Ok(clients);
             }
             catch (NullReferenceException ex)
@@ -39,11 +39,11 @@ namespace AnimesControl.Api.Controllers
 
         }
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             try
             {
-                var client = customerservice.GetByIdCustomer(id);
+                var client = await customerservice.GetByIdCustomer(id);
                 return Ok(client);
             }
             catch (NullReferenceException ex)

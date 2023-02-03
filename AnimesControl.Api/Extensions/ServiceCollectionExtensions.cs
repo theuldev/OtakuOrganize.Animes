@@ -1,4 +1,4 @@
-﻿using AnimesControl .Application.Mapper;
+﻿using AnimesControl.Application.Mapper;
 using AnimesControl.Application.Validations;
 using AnimesControl.Core.Interfaces.Repostories;
 using AnimesControl.Application.Common.Interfaces.Services;
@@ -15,6 +15,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using AnimesControl.Application.Services;
+using AnimesControl.Infra.Caching;
 
 namespace AnimesControl.Infra.Extensions
 {
@@ -29,7 +30,17 @@ namespace AnimesControl.Infra.Extensions
 
             //add context class
             services.AddDbContext<AnimeContext>();
-         
+
+
+            //add redis service
+
+            services.AddStackExchangeRedisCache(o =>
+            {
+                o.InstanceName = "instance";
+                o.Configuration = "localhost:6379";
+            });
+            services.AddScoped<ICachingService, CachingService>();
+
             return services;
         }
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
@@ -38,11 +49,12 @@ namespace AnimesControl.Infra.Extensions
             services.AddScoped<IAnimeService, AnimeService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IAnime_CustomerService, Anime_CustomerService>();
+            services.AddScoped<ISecurityService, SecurityService>();
+
 
             //add mapping service
             services.AddAutoMapper(typeof(CustomerProfile));
             services.AddAutoMapper(typeof(AnimeProfile));
-
             //add validation services
             services
                 .AddValidatorsFromAssemblyContaining(typeof(AnimeValidator)).AddFluentValidationAutoValidation();

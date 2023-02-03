@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
+      "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
       "projectName": "AnimesControl.Core",
-      "projectPath": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
+      "projectPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
       "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\obj\\",
+      "outputPath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -20,11 +20,11 @@ namespace AnimesControl.Api.Controllers
         }
 
         [HttpGet()]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             try
             {
-                var clients = animeservice.GetAnimes();
+                var clients = await animeservice.GetAnimes();
                 return Ok(clients);
 
             }
@@ -39,11 +39,11 @@ namespace AnimesControl.Api.Controllers
 
         }
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             try
             {
-                var client = animeservice.GetByIdAnimeDetails(id);
+                var client = await animeservice.GetByIdAnimeDetails(id);
                 return Ok(client);
             }
             catch (NullReferenceException ex)
@@ -111,12 +111,12 @@ namespace AnimesControl.Api.Controllers
             }
         }
         [HttpGet("GetAnimeWithCustomerId/{id}")]
-        public IActionResult GetAnimeWithCustomerId(int id)
+        public async Task<IActionResult> GetAnimeWithCustomerId(int id)
         {
 
             try
             {
-                var customers = animecustomerService.GetAnimeWithCustomerId(id);
+                var customers = await animecustomerService.GetAnimeWithCustomerId(id);
                 return Ok(customers);
             }
             catch (NullReferenceException ex)

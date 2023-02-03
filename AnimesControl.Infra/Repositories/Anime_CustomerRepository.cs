@@ -26,23 +26,19 @@ namespace AnimesControl.Infra.Repositories
                 throw new ArgumentException();
             }
 
-
-
             context.Anime_Customer.Add(anime_Customer);
             context.SaveChanges();
 
         }
-        public List<Anime_Customer> GetCustomerWithAnimeId(int id)
+        public async Task<List<Anime_Customer>> GetCustomerWithAnimeId(int id)
         {
-            var animes = context.Anime_Customer.AsNoTracking().Where(a => a.AnimeId == id).ToList();
-
-            return animes;
+            return await context.Anime_Customer.AsNoTracking().Where(a => a.AnimeId == id).ToListAsync();
         }
-        public List<Anime_Customer> GetAnimeWithCustomerId(int id)
+        public async Task<List<Anime_Customer>> GetAnimeWithCustomerId(int id)
         {
-            var customers = context.Anime_Customer.AsNoTracking().Where(a => a.CustomerId == id).ToList();
 
-            return customers;
+
+            return await context.Anime_Customer.AsNoTracking().Where(a => a.CustomerId == id).ToListAsync();
         }
         public void RemoveAnimeCustomer(Anime_Customer model)
         {

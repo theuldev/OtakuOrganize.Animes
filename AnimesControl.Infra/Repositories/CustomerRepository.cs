@@ -16,23 +16,22 @@ namespace AnimesControl.Infra.Repositories
         public CustomerRepository(AnimeContext _context)
         {
             this.context = _context;
-                
+
         }
-        public List<Customer> GetCustomers()
+        public async Task<List<Customer>> GetCustomers()
         {
-            var customers = context.Customers.ToList();
-            return customers;
+            return await context.Customers.ToListAsync();
         }
 
-        public Customer GetByIdCustomer(int id)
+        public async Task<Customer> GetByIdCustomer(int id)
         {
-           var customer = context.Customers.AsNoTracking().FirstOrDefault(x => x.Id == id);
+            var customer = await context.Customers.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
             if (customer == null) throw new NullReferenceException();
             return customer;
         }
 
         public void PostCustomer(Customer customer)
-        {               
+        {
             context.Customers.Add(customer);
             context.SaveChanges();
         }
@@ -50,16 +49,21 @@ namespace AnimesControl.Infra.Repositories
 
         }
 
-        public void AddAnimeCustomer(Customer customer, Anime anime)
+        public void AddAnimeCustomer(Anime_Customer anime_Customer)
         {
-         
-            var anime_customer = new Anime_Customer()
-            {
-                AnimeId = anime.Id,
-                CustomerId = customer.Id,
-            };
-            context.Anime_Customer.Add(anime_customer);
+            context.Anime_Customer.Add(anime_Customer);
             context.SaveChanges();
+        }
+
+        public bool ExistsUsername(string username)
+        {
+            var userexist = context.Customers.AsNoTracking().Any(x => x.Username == username);
+            return userexist;
+        }
+        public bool ExistsEmail(string email)
+        {
+            var emailexist = context.Customers.AsNoTracking().Any(x => x.Email == email);
+            return emailexist;
         }
     }
 }

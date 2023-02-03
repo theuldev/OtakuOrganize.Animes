@@ -14,25 +14,33 @@ namespace AnimesControl.Infra.Repositories
 
         public AnimeRepository(AnimeContext context)
         {
-            this.context = context; 
+            this.context = context;
+        }
+
+        public bool AnimeExists(int id)
+        {
+
+            var exist = context.Anime.AsNoTracking().Where(a => a.Id == id).Any();
+            return exist;
         }
 
         public void DeleteAnime(Anime animeDetails)
         {
-            
-            context.Remove(animeDetails);
+            var anime = context.Anime.AsNoTracking().Where(a => a.Id == animeDetails.Id).FirstOrDefault();
+            if (anime == null) throw new NullReferenceException();
+            context.Entry(anime).State = EntityState.Deleted;
             context.SaveChanges();
         }
 
-        public List<Anime> GetAnimes()
+        public async Task<List<Anime>> GetAnimes()
         {
 
-            return context.Anime.ToList();
+            return await context.Anime.ToListAsync();
         }
 
-        public Anime GetByIdAnimeDetails(int? id)
+        public async Task<Anime> GetByIdAnimeDetails(int? id)
         {
-            var anime = context.Anime.AsNoTracking().FirstOrDefault(e => e.Id == id);
+            var anime = await context.Anime.AsNoTracking().FirstOrDefaultAsync(e => e.Id == id);
             if (anime == null) throw new NullReferenceException();
             return anime;
         }
@@ -41,13 +49,13 @@ namespace AnimesControl.Infra.Repositories
         {
             context.Anime.Add(animeDetails);
             context.SaveChanges();
-            
         }
+
 
         public void PutAnime(Anime animeDetails)
         {
-        
-            context.Entry(animeDetails).State = EntityState.Modified;
+            var anime = context.Anime.Find(animeDetails.Id);
+            context.Entry(anime).CurrentValues.SetValues(animeDetails);
             context.SaveChanges();
         }
     }

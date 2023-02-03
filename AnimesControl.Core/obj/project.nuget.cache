@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jr+QkuYMMs+GnXX+/DntPhxqB4WBRXhHXNDj6o75awd+1kE+l/kEN2CtPBJSF3X75sV3NgVXdlwIrQIU0IBZGw==",
+  "dgSpecHash": "WPv726qtBV3ZAkRmuQivXU2PfsBTI5C+TK/3+rfrfy5NYOiRqFGC6iENnQUyd/7oMRrQnWdBQD3znIq+iz3zbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mathe\\source\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
+  "projectFilePath": "C:\\Users\\mathe\\source\\repos\\AnimesControl\\AnimesControl.BackEnd\\AnimesControl.Core\\AnimesControl.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
