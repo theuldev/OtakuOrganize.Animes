@@ -27,5 +27,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AnimesControl.Application\AnimesControl.Application.csproj" />
   </ItemGroup>
-
+	<ItemGroup>
+		<Using Include="Xunit"></Using>
+	</ItemGroup>
 </Project>
