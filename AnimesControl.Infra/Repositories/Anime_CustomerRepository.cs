@@ -30,21 +30,21 @@ namespace AnimesControl.Infra.Repositories
             context.SaveChanges();
 
         }
-        public async Task<List<Anime_Customer>> GetCustomerWithAnimeId(int id)
+        public async Task<List<Anime_Customer>> GetCustomersWithAnimeId(int? id)
         {
-            return await context.Anime_Customer.AsNoTracking().Where(a => a.AnimeId == id).ToListAsync();
+            return context.Anime_Customer.Where(a => a.AnimeId == id).ToList();
         }
-        public async Task<List<Anime_Customer>> GetAnimeWithCustomerId(int id)
+        public async Task<List<Anime_Customer>> GetAnimesWithCustomerId(int? id)
         {
 
 
-            return await context.Anime_Customer.AsNoTracking().Where(a => a.CustomerId == id).ToListAsync();
+            return context.Anime_Customer.AsNoTracking().Where(a => a.CustomerId == id).ToList();
         }
         public void RemoveAnimeCustomer(Anime_Customer model)
         {
-            var anime_customer = context.Anime_Customer.AsNoTracking().Where(a => a.AnimeId == model.AnimeId && a.CustomerId == model.CustomerId).FirstOrDefault();
+            var anime_customer = context.Anime_Customer.Where(a => a.AnimeId == model.AnimeId && a.CustomerId == model.CustomerId).FirstOrDefault();
             if (anime_customer == null) throw new NullReferenceException();
-            context.Anime_Customer.Remove(anime_customer);
+            context.Entry(anime_customer).State = EntityState.Deleted;
             context.SaveChanges();
         }
 

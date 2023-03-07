@@ -34,7 +34,7 @@ namespace AnimesControl.Application.Services
         public async Task<IEnumerable<AnimeViewModel>> GetAnimes()
         {
             var animes = await repository.GetAnimes();
-            if (animes.Count <= 0) throw new NullReferenceException();
+            if (animes.Count <= 0) throw new ArgumentNullException();
 
             var animeMap = mapper.Map<IEnumerable<AnimeViewModel>>(animes);
 
@@ -43,7 +43,7 @@ namespace AnimesControl.Application.Services
 
         public async Task<AnimeViewModel> GetByIdAnimeDetails(int? id)
         {
-            if (id == null) throw new NullReferenceException();
+            if (id == null) throw new ArgumentNullException();
 
             Anime anime;
             var cacheValue = await cachingService.GetAsync(id.ToString());
@@ -65,7 +65,7 @@ namespace AnimesControl.Application.Services
 
         public void PostAnime(AnimeInputModel animeDetails)
         {
-            if (animeDetails == null) throw new NullReferenceException();
+            if (animeDetails == null) throw new ArgumentNullException();
 
             var animeMap = mapper.Map<Anime>(animeDetails);
             repository.PostAnime(animeMap);

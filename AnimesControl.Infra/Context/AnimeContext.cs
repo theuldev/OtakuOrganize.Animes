@@ -62,8 +62,19 @@ namespace AnimesControl.Infra.Context
             .HasForeignKey(e => e.CustomerId)
 
             );
+            builder.Entity<User>(u =>
+            {
+                u.HasKey(e => e.Id);
+                u.HasOne(c => c.Customer).WithOne(c => c.User).HasForeignKey<Customer>(c => c.UserId).OnDelete(DeleteBehavior.Cascade);
+            }
+
+
+
+            );
+
 
         }
+        public DbSet<User> Users { get; set; }
         public DbSet<Anime> Anime { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Anime_Customer> Anime_Customer { get; set; }

@@ -8,6 +8,7 @@ namespace AnimesControl.Core.Entities
 {
     public class Anime_Customer
     {
+    
         public int Id { get; set; }
         public int AnimeId { get; set; }
         public Anime Anime { get; set; }

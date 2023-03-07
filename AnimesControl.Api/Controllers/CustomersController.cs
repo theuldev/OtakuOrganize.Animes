@@ -63,9 +63,9 @@ namespace AnimesControl.Api.Controllers
                 customerservice.PostCustomer(customer);
                 return CreatedAtAction("GetById", new { customer.Id }, customer);
             }
-            catch (NullReferenceException ex)
+            catch (ArgumentNullException ex)
             {
-                return BadRequest("O objeto contém referencias nulas" + ex.Message);
+                return BadRequest("O objeto é nulo" + ex.Message);
             }
             catch (Exception ex)
             {

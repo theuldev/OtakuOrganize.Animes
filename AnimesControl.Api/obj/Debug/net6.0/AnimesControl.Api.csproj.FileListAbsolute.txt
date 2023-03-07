@@ -182,3 +182,8 @@ C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Ap
 C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\ref\AnimesControl.Api.dll
 C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\AnimesControl.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\staticwebassets\msbuild.AnimesControl.Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\staticwebassets\msbuild.build.AnimesControl.Api.props
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.AnimesControl.Api.props
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.AnimesControl.Api.props
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Api\obj\Debug\net6.0\staticwebassets.pack.json

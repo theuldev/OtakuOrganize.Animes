@@ -28,17 +28,18 @@ namespace AnimesControl.Application.Services
         }
 
 
-        public async void DeleteCustomer(int id)
+        public async Task DeleteCustomer(int? id)
         {
+            if (id == null) throw new ArgumentNullException();
             var customer = await repository.GetByIdCustomer(id);
             if (customer == null) throw new NullReferenceException();
             repository.DeleteCustomer(customer);
         }
 
-        public async Task<CustomerViewModel> GetByIdCustomer(int id)
+        public async Task<CustomerViewModel> GetByIdCustomer(int? id)
         {
 
-            if (id == null) throw new NullReferenceException();
+            if (id == null) throw new ArgumentNullException();
 
             var cacheValue = await cachingService.GetAsync(id.ToString());
             Customer customer;
@@ -50,6 +51,7 @@ namespace AnimesControl.Application.Services
             else
             {
                 customer = await repository.GetByIdCustomer(id);
+                if (customer == null) throw new NullReferenceException();
             }
             var customerMap = mapper.Map<CustomerViewModel>(customer);
             return customerMap;
@@ -60,39 +62,30 @@ namespace AnimesControl.Application.Services
         public async Task<IEnumerable<CustomerViewModel>> GetCustomers()
         {
             IEnumerable<Customer> customers = await repository.GetCustomers();
-            if (customers.Count() <= 0) throw new NullReferenceException();
+            if (customers.Count() <= 0) throw new ArgumentNullException();
             var customersMap = mapper.Map<IEnumerable<CustomerViewModel>>(customers);
             return customersMap.OrderBy(c => c.Id);
         }
 
-        public async void PostCustomer(CustomerInputModel customer)
-        {
-            if (customer == null) throw new NullReferenceException();
-
-            var userexist = repository.ExistsUsername(customer.Username);
-            if (userexist == true) throw new UsernameAlreadyRegisteredException();
-
-            var emailexist = repository.ExistsEmail(customer.Email);
-            if (emailexist == true) throw new EmailAlreadyRegisteredException();
-
+        public void PostCustomer(CustomerInputModel customer)
+        { 
+            if (customer == null) throw new ArgumentNullException();
        
-
             var customerMap = mapper.Map<Customer>(customer);
-            customerMap.Password = await securityService.EncryptPassword(customer.Password);
-
             repository.PostCustomer(customerMap);
         }
 
-        public void PutCustomer(int id, CustomerInputModel customer)
+        public void PutCustomer(int? id, CustomerInputModel customer)
         {
-            if (id == null || customer == null) throw new NullReferenceException();
+            if (id == null || customer == null) throw new ArgumentNullException();
 
-            var emailexist = repository.ExistsEmail(customer.Email);
-            if (emailexist == true) throw new EmailAlreadyRegisteredException();
+            if(id != customer.Id) throw new CredentialsNotEqualsException();
+
 
             var customersMap = mapper.Map<Customer>(customer);
             repository.PutCustomer(customersMap);
         }
+
       
     }
 }

@@ -54,7 +54,7 @@ namespace AnimesControl.Infra.Repositories
 
         public void PutAnime(Anime animeDetails)
         {
-            var anime = context.Anime.Find(animeDetails.Id);
+            var anime = context.Anime.Where(a => a.Id == animeDetails.Id);
             context.Entry(anime).CurrentValues.SetValues(animeDetails);
             context.SaveChanges();
         }

@@ -23,7 +23,7 @@ namespace AnimesControl.Infra.Repositories
             return await context.Customers.ToListAsync();
         }
 
-        public async Task<Customer> GetByIdCustomer(int id)
+        public async Task<Customer> GetByIdCustomer(int? id)
         {
             var customer = await context.Customers.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
             if (customer == null) throw new NullReferenceException();
@@ -38,13 +38,16 @@ namespace AnimesControl.Infra.Repositories
 
         public void PutCustomer(Customer customer)
         {
-            context.Entry(customer).State = EntityState.Modified;
+            var customerData = context.Customers.Where(c => c.Id == customer.Id).FirstOrDefault() ;
+            context.Entry(customerData).CurrentValues.SetValues(customer);
             context.SaveChanges();
         }
 
         public void DeleteCustomer(Customer customer)
         {
-            context.Remove(customer);
+
+   
+            context.Entry(customer).State = EntityState.Deleted;
             context.SaveChanges();
 
         }
@@ -55,15 +58,5 @@ namespace AnimesControl.Infra.Repositories
             context.SaveChanges();
         }
 
-        public bool ExistsUsername(string username)
-        {
-            var userexist = context.Customers.AsNoTracking().Any(x => x.Username == username);
-            return userexist;
-        }
-        public bool ExistsEmail(string email)
-        {
-            var emailexist = context.Customers.AsNoTracking().Any(x => x.Email == email);
-            return emailexist;
-        }
     }
 }

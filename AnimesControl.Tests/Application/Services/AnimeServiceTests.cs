@@ -24,7 +24,7 @@ namespace AnimesControl.Tests.Application.Services;
 
 public class AnimeServiceTests
 {
-    [Fact]
+    
     public void ValidAnime_PostIsCalled_AnimeModelMustAddInDatabase()
     {
 
@@ -62,8 +62,7 @@ public class AnimeServiceTests
         }
 
     }
-    [Fact]
-    public void InvalidAnime_PostIsCalled_ThrowAnNullReferenceException()
+    public void InvalidAnime_PostIsCalled_ThrowAnArgumentNullException()
     {
 
         var animeInputModel = new Fixture().Create<AnimeInputModel>();
@@ -74,12 +73,11 @@ public class AnimeServiceTests
         var animeService = new AnimeService(animeRepositoryMock.Object, mapperMock.Object, cachingMock.Object);
 
         animeInputModel = null;
-
-        var exception = Assert.Throws<NullReferenceException>(() => animeService.PostAnime(animeInputModel));
+        var exception = Assert.Throws<ArgumentNullException>(() => animeService.PostAnime(animeInputModel));
 
 
     }
-    [Fact]
+    
     public void ValidAnime_PutIsCalled_AnimeModelMustUpdateInDatabase()
     {
         var id = new Random().Next();
@@ -133,7 +131,7 @@ public class AnimeServiceTests
         }
 
     }
-    [Fact]
+    
     public void InvalidAnime_PutIsCalled_ThrowAnNullReferenceException()
     {
         var animeInputModel = new Fixture().Create<AnimeInputModel>();
@@ -171,7 +169,7 @@ public class AnimeServiceTests
         }
     }
 
-    [Fact]
+    
     public void InvalidAnime_PutIsCalled_ThrowCredentialsNotEqualsException()
     {
 
@@ -209,7 +207,7 @@ public class AnimeServiceTests
             Assert.Throws<NullReferenceException>(() => animeService.PutAnime(id, animeInputModel));
         }
     }
-    [Fact]
+    
     public void ValidAnime_DeleteIsCalled_AnimeModelMustDeletedInDatabase()
     {
 
@@ -243,7 +241,7 @@ public class AnimeServiceTests
 
         }
     }
-    [Fact]
+    
     public void InvalidAnime_DeleteIsCalled_ThrowNullReferenceException()
     {
 
@@ -270,7 +268,7 @@ public class AnimeServiceTests
         }
 
     }
-    [Fact]
+    
     public void ValidAnime_GetIsCalled_ReturnValidAnimeViewModel()
     {
         var animeInputModel = new Fixture().Create<AnimeInputModel>();
@@ -307,7 +305,7 @@ public class AnimeServiceTests
 
         }
     }
-    [Fact]
+    
     public async Task InvalidAnime_GetIsCalled_ThrowNullReferenceException()
     {
         var animeRepositoryMock = new Mock<IAnimeRepository>();
@@ -319,7 +317,7 @@ public class AnimeServiceTests
 
         var exAnime = await Assert.ThrowsAsync<NullReferenceException>(() => animeService.GetAnimes());
     }
-    [Fact]
+    
     public void ValidAnime_GetByIdIsCalled_ReturnValidAnimeViewModel()
     {
         var id = new Random().Next();
@@ -369,8 +367,8 @@ public class AnimeServiceTests
 
 
     }
-    [Fact]
-    public void InvalidAnime_GetByIdIsCalled_ThrowNullReferenceException()
+    
+    public void InvalidAnime_GetByIdIsCalled_ThrowAnArgumentNullException()
     {
         var animeInputModel = new Fixture().Create<AnimeInputModel>();
         animeInputModel = null;

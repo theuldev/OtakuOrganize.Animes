@@ -1,5 +1,6 @@
 ﻿using AnimesControl.Application.Models.InputModels;
 using FluentValidation;
+using Microsoft.AspNetCore.Rewrite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,6 @@ namespace AnimesControl.Application.Validations
         public CustomerValidator()
         {
 
-            RuleFor(x => x.Email)
-                .NotNull()
-                .NotEmpty()
-                .EmailAddress()
-                .WithMessage("Email Inválido");
             RuleFor(x => x.Birthdate)
                 .NotEmpty()
                 .NotNull()
@@ -29,16 +25,17 @@ namespace AnimesControl.Application.Validations
                 .MaximumLength(25)
                 .WithMessage("Nome Inválido");
 
-            RuleFor(x => x.Username)
+            RuleFor(x => x.Phone)
+                .Length(11)
                 .NotNull()
                 .NotEmpty()
-                .MaximumLength(20)
-                .WithMessage("Usuário Inválido");
-            RuleFor(x => x.Password)
-                .NotNull()
-                .NotEmpty()
-                .MaximumLength(25)
-                .WithMessage("Senha Inválida");
+                .WithMessage("Telefone Inválido");
+            RuleFor(x => x.LastName)
+              .NotNull()
+             .NotEmpty()
+             .MaximumLength(25)
+             .WithMessage("Sobrenome Inválido");
+
         }
     }
 }

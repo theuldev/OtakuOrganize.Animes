@@ -86,16 +86,46 @@ namespace AnimesControl.Infra.Migrations
                     b.Property<DateTime>("Birthdate")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("Gender")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("tb_customers", (string)null);
+                });
+
+            modelBuilder.Entity("AnimesControl.Core.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("LastLogin")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -107,7 +137,7 @@ namespace AnimesControl.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tb_customers", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("AnimesControl.Core.Entities.Anime_Customer", b =>
@@ -129,6 +159,17 @@ namespace AnimesControl.Infra.Migrations
                     b.Navigation("Customer");
                 });
 
+            modelBuilder.Entity("AnimesControl.Core.Entities.Customer", b =>
+                {
+                    b.HasOne("AnimesControl.Core.Entities.User", "User")
+                        .WithOne("Customer")
+                        .HasForeignKey("AnimesControl.Core.Entities.Customer", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("AnimesControl.Core.Entities.Anime", b =>
                 {
                     b.Navigation("Anime_Customer");
@@ -137,6 +178,12 @@ namespace AnimesControl.Infra.Migrations
             modelBuilder.Entity("AnimesControl.Core.Entities.Customer", b =>
                 {
                     b.Navigation("Animes_Customer");
+                });
+
+            modelBuilder.Entity("AnimesControl.Core.Entities.User", b =>
+                {
+                    b.Navigation("Customer")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

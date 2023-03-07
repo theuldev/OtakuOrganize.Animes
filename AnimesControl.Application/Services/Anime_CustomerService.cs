@@ -27,10 +27,8 @@ namespace AnimesControl.Application.Services
             mapper = _mapper;
         }
 
-        public async void AddAnimeCustomer(Anime_CustomerInputModel model)
+        public async Task AddAnimeCustomer(Anime_CustomerInputModel model)
         {
-            if (model.AnimeId == null || model.CustomerId == null) throw new NullReferenceException();
-
             var client = await customerService.GetByIdCustomer(model.CustomerId);
             var anime = await animeService.GetByIdAnimeDetails(model.AnimeId);
             if (anime.Id == null || client.Id == null) throw new NullReferenceException();
@@ -40,11 +38,11 @@ namespace AnimesControl.Application.Services
             anime_customerRepository.AddAnime_Customer(modelMap);
         }
 
-        public async Task<List<Anime_CustomerViewModel>> GetCustomerWithAnimeId(int id)
+        public async Task<List<Anime_CustomerViewModel>> GetCustomerWithAnimeId(int? id)
         {
 
-            if (id == null) throw new NullReferenceException();
-            var clients = await anime_customerRepository.GetCustomerWithAnimeId(id);
+            if (id == null) throw new ArgumentNullException();
+            var clients = await anime_customerRepository.GetCustomersWithAnimeId(id);
 
             if (clients == null) throw new NullReferenceException();
 
@@ -52,21 +50,22 @@ namespace AnimesControl.Application.Services
 
             return clientsMap;
         }
-        public async Task<List<Anime_CustomerViewModel>> GetAnimeWithCustomerId(int id)
+        public async Task<List<Anime_CustomerViewModel>> GetAnimeWithCustomerId(int? id)
         {
-            if (id == null) throw new NullReferenceException();
-            var animes = await anime_customerRepository.GetAnimeWithCustomerId(id);
+            if (id == null) throw new ArgumentNullException();
+            var animes = await anime_customerRepository.GetAnimesWithCustomerId(id);
             if (animes == null) throw new NullReferenceException();
 
-            var clientsMap = mapper.Map<List<Anime_CustomerViewModel>>(animes);
-            return clientsMap;
+            var animeMap = mapper.Map<List<Anime_CustomerViewModel>>(animes);
+            return animeMap;
         }
-        public async void RemoveAnimeCustomer(Anime_CustomerInputModel model)
+        public void RemoveAnimeCustomer(Anime_CustomerInputModel anime)
         {
 
-            if (model.AnimeId == null || model.CustomerId == null) throw new NullReferenceException();
-            var modelMap = mapper.Map<Anime_Customer>(model);
-            anime_customerRepository.RemoveAnimeCustomer(modelMap);
+            if (anime.AnimeId == null || anime.CustomerId == null) throw new NullReferenceException();
+
+            var animeMap = mapper.Map<Anime_Customer>(anime);
+            anime_customerRepository.RemoveAnimeCustomer(animeMap);
 
         }
     }
