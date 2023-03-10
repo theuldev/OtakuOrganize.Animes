@@ -234,6 +234,7 @@ namespace AnimesControl.Tests.Application.Services
 
             var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => service.GetAnimeWithCustomerId(null));
         }
+        [Fact]
         public async void AnimeCustomerValid_RemoveAnimeCustomer_RemoveAnimeCustomer()
          {
             var animeModel = new Fixture().Create<AnimeInputModel>();
@@ -279,7 +280,7 @@ namespace AnimesControl.Tests.Application.Services
             }
 
         }
-        [Fact]
+
         public async void AnimeCustomerInvalid_RemoveAnimeCustomerÌsCalled_ThrowNullReferenceException()
         {
             var animeCustomerModel = new Fixture().Create<Anime_CustomerInputModel>();

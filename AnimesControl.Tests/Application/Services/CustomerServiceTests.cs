@@ -299,7 +299,7 @@ public class CustomerServiceTests
         var exception = Assert.Throws<NullReferenceException>(() => customerService.PutCustomer(customerInputModel.Id, customerInputModel));
 
     }
-    
+    [Fact]
     public void ValidCustomer_DeleteIsCalled_CustomerModelMustDeleteInDatabase()
     {
         var customerInputModel = new Fixture().Create<CustomerInputModel>();
@@ -327,7 +327,7 @@ public class CustomerServiceTests
 
             customerService.DeleteCustomer(customerInputModel.Id);
 
-            Assert.Equal(1, context.Customers.Count());
+            Assert.Empty(context.Customers.ToList());
 
 
 

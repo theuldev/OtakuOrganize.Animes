@@ -38,15 +38,17 @@ namespace AnimesControl.Infra.Repositories
 
         public void PutCustomer(Customer customer)
         {
-            var customerData = context.Customers.Where(c => c.Id == customer.Id).FirstOrDefault() ;
+            var customerData = context.Customers.Where(c => c.Id == customer.Id).FirstOrDefault();
+            if (customerData == null) throw new NullReferenceException();
             context.Entry(customerData).CurrentValues.SetValues(customer);
             context.SaveChanges();
         }
 
-        public void DeleteCustomer(Customer customer)
+        public void DeleteCustomer(Customer customerDetails)
         {
 
-   
+            var customer = context.Customers.Where(c => c.Id == customerDetails.Id).FirstOrDefault();
+            if(customer == null) throw new NullReferenceException();
             context.Entry(customer).State = EntityState.Deleted;
             context.SaveChanges();
 

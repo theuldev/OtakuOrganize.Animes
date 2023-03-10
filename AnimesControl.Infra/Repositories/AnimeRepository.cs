@@ -26,7 +26,8 @@ namespace AnimesControl.Infra.Repositories
 
         public void DeleteAnime(Anime animeDetails)
         {
-            var anime = context.Anime.AsNoTracking().Where(a => a.Id == animeDetails.Id).FirstOrDefault();
+
+            var anime = context.Anime.Where(a => a.Id == animeDetails.Id).FirstOrDefault();
             if (anime == null) throw new NullReferenceException();
             context.Entry(anime).State = EntityState.Deleted;
             context.SaveChanges();

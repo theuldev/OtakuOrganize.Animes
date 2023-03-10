@@ -207,6 +207,7 @@ public class AnimeServiceTests
             Assert.Throws<NullReferenceException>(() => animeService.PutAnime(id, animeInputModel));
         }
     }
+    [Fact]
     
     public void ValidAnime_DeleteIsCalled_AnimeModelMustDeletedInDatabase()
     {
@@ -236,7 +237,7 @@ public class AnimeServiceTests
 
             animeService.DeleteAnime(anime.Id);
 
-            Assert.Equal(1, context.Anime.Count());
+            Assert.Empty(context.Anime.ToList());
 
 
         }
