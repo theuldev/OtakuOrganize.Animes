@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AnimesControl.Infra.Migrations
 {
     [DbContext(typeof(AnimeContext))]
-    [Migration("20230214141746_ChangePropertiesMigration")]
-    partial class ChangePropertiesMigration
+    [Migration("20230628231900_UpdateToGuidUserAndCustomer")]
+    partial class UpdateToGuidUserAndCustomer
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,9 @@ namespace AnimesControl.Infra.Migrations
 
             modelBuilder.Entity("AnimesControl.Core.Entities.Anime", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<int>("Category")
                         .HasColumnType("integer");
@@ -40,10 +38,10 @@ namespace AnimesControl.Infra.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("PostAt")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -62,11 +60,11 @@ namespace AnimesControl.Infra.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AnimeId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("AnimeId")
+                        .HasColumnType("uuid");
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -74,19 +72,17 @@ namespace AnimesControl.Infra.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Anime_Customer");
+                    b.ToTable("tb_anime_customer", (string)null);
                 });
 
             modelBuilder.Entity("AnimesControl.Core.Entities.Customer", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("Birthdate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("Gender")
                         .HasColumnType("integer");
@@ -103,8 +99,8 @@ namespace AnimesControl.Infra.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -116,18 +112,16 @@ namespace AnimesControl.Infra.Migrations
 
             modelBuilder.Entity("AnimesControl.Core.Entities.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("LastLogin")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -139,7 +133,7 @@ namespace AnimesControl.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("tb_users", (string)null);
                 });
 
             modelBuilder.Entity("AnimesControl.Core.Entities.Anime_Customer", b =>

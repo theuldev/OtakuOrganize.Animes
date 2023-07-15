@@ -10,7 +10,7 @@ namespace AnimesControl.Core.Entities
 {
     public class Customer
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
@@ -18,6 +18,6 @@ namespace AnimesControl.Core.Entities
         public DateTime Birthdate { get; set; }
         public List<Anime_Customer> Animes_Customer { get; set; }
         public User User { get; set; }
-        public int UserId { get; set;}
+        public Guid UserId { get; set;}
     }
 }

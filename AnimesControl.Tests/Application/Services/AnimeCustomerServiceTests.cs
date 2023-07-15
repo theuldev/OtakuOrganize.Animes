@@ -61,7 +61,7 @@ namespace AnimesControl.Tests.Application.Services
 
                 await service.AddAnimeCustomer(animeCustomerModel);
 
-                var animeContext = context.Anime_Customer.AsNoTracking().Where(c => c.AnimeId == animeCustomerModel.AnimeId && c.CustomerId == animeCustomerModel.CustomerId).FirstOrDefault();
+                var animeContext = context.Anime_Customer.AsNoTracking().Where(c => c.AnimeId == animeCustomerModel.AnimeId && animeCustomerModel.CustomerId.Equals(c.CustomerId)).FirstOrDefault();
                 Assert.NotNull(animeContext);
                 Assert.Single(context.Anime_Customer.ToList());
 
@@ -156,8 +156,6 @@ namespace AnimesControl.Tests.Application.Services
 
             var service = new Anime_CustomerService(customerServiceMock.Object, animeServiceMock.Object, animeCustomerRepositoryMock.Object, mapperMock.Object);
 
-
-
             var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => service.GetCustomerWithAnimeId(null));
         }
         public async void AnimeCustomerValid_GetAnimeWithCustomerIdÌsCalled_ReturnAnimeCustomerModel()
@@ -234,7 +232,6 @@ namespace AnimesControl.Tests.Application.Services
 
             var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => service.GetAnimeWithCustomerId(null));
         }
-        [Fact]
         public async void AnimeCustomerValid_RemoveAnimeCustomer_RemoveAnimeCustomer()
          {
             var animeModel = new Fixture().Create<AnimeInputModel>();

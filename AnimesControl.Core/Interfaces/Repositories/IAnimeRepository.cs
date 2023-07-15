@@ -9,11 +9,11 @@ namespace AnimesControl.Core.Interfaces.Repostories
     public interface IAnimeRepository
     {
         Task<List<Anime>> GetAnimes();
-        Task<Anime> GetByIdAnimeDetails(int? id);
+        Task<Anime> GetByIdAnimeDetails(Guid id);
         void PostAnime(Anime animeDetails);
         void PutAnime(Anime animeDetails);
         void DeleteAnime(Anime animeDetails);
-        bool AnimeExists(int id);
+        bool AnimeExists(Guid id);
 
     }
 }

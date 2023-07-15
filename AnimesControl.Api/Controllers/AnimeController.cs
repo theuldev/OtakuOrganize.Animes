@@ -6,8 +6,7 @@ using AnimesControl.Core.Entities;
 
 namespace AnimesControl.Api.Controllers
 {
-    [ApiController]
-    [Route("[controller]/")]
+    [Route("api/animes")]
     public class AnimeController : ControllerBase
     {
         private readonly IAnimeService animeservice;
@@ -24,14 +23,15 @@ namespace AnimesControl.Api.Controllers
         {
             try
             {
-                var clients = await animeservice.GetAnimes();
-                return Ok(clients);
+                var animes = await animeservice.GetAnimes();
+                return Ok(animes);
 
             }
-            catch (NullReferenceException ex)
+            catch (ArgumentNullException ex)
             {
                 return NotFound("Nenhum objeto foi retornado: " + ex.Message);
             }
+
             catch (Exception ex)
             {
                 return BadRequest("Erro: " + ex.Message);
@@ -39,14 +39,14 @@ namespace AnimesControl.Api.Controllers
 
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             try
             {
-                var client = await animeservice.GetByIdAnimeDetails(id);
-                return Ok(client);
+                var anime = await animeservice.GetByIdAnimeDetails(id);
+                return Ok(anime);
             }
-            catch (NullReferenceException ex)
+            catch (ArgumentNullException ex)
             {
                 return NotFound("Nenhum objeto com o Id indicado foi retornado: " + ex.Message);
             }
@@ -75,7 +75,7 @@ namespace AnimesControl.Api.Controllers
 
         }
         [HttpPut("{id}")]
-        public IActionResult Put(int id, AnimeInputModel anime)
+        public IActionResult Put(Guid id, AnimeInputModel anime)
         {
             if (id.Equals(anime.Id)) return BadRequest("O id passado não é o mesmo do usuário");
 
@@ -94,7 +94,7 @@ namespace AnimesControl.Api.Controllers
             }
         }
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(Guid id)
         {
             try
             {
@@ -111,13 +111,13 @@ namespace AnimesControl.Api.Controllers
             }
         }
         [HttpGet("GetAnimeWithCustomerId/{id}")]
-        public async Task<IActionResult> GetAnimeWithCustomerId(int id)
+        public async Task<IActionResult> GetAnimeWithCustomerId(Guid id)
         {
 
             try
             {
-                var customers = await animecustomerService.GetAnimeWithCustomerId(id);
-                return Ok(customers);
+                var anime = await animecustomerService.GetAnimeWithCustomerId(id);
+                return Ok(anime);
             }
             catch (NullReferenceException ex)
             {

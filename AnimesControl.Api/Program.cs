@@ -25,7 +25,6 @@ builder.Services.AddSwaggerGen(
     c =>
     {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "AnimesControl.Api", Version = "v1" });
-        c.ResolveConflictingActions(x => x.First());
     });
 var app = builder.Build();
 

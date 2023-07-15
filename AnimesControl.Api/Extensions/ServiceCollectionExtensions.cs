@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AnimesControl.Application.Services;
 using AnimesControl.Infra.Caching;
+using AnimesControl.Core.Interfaces.Repositories;
 
 namespace AnimesControl.Infra.Extensions
 {
@@ -27,6 +28,7 @@ namespace AnimesControl.Infra.Extensions
             services.AddScoped<IAnimeRepository, AnimeRepository>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IAnime_CustomerRepository, Anime_CustomerRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             //add context class
             services.AddDbContext<AnimeContext>();
@@ -50,11 +52,13 @@ namespace AnimesControl.Infra.Extensions
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IAnime_CustomerService, Anime_CustomerService>();
             services.AddScoped<ISecurityService, SecurityService>();
+            services.AddScoped<IUserService, UserService>();
 
 
             //add mapping service
             services.AddAutoMapper(typeof(CustomerProfile));
             services.AddAutoMapper(typeof(AnimeProfile));
+            services.AddAutoMapper(typeof(UserProfile));
             //add validation services
             services
                 .AddValidatorsFromAssemblyContaining(typeof(AnimeValidator)).AddFluentValidationAutoValidation();

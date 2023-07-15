@@ -7,8 +7,7 @@ using AnimesControl.Application.Common.Interfaces.Services;
 
 namespace AnimesControl.Api.Controllers
 {
-    [ApiController]
-    [Route("[controller]/")]
+    [Route("api/customers")]
     public class CustomersController : ControllerBase
     {
         private readonly ICustomerService customerservice;
@@ -39,7 +38,7 @@ namespace AnimesControl.Api.Controllers
 
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             try
             {
@@ -73,7 +72,7 @@ namespace AnimesControl.Api.Controllers
             }
         }
         [HttpPut("{id}")]
-        public IActionResult Put(int id, CustomerInputModel customer)
+        public IActionResult Put(Guid id, CustomerInputModel customer)
         {
             try
             {
@@ -93,7 +92,7 @@ namespace AnimesControl.Api.Controllers
             }
         }
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(Guid id)
         {
             try
             {
@@ -135,7 +134,7 @@ namespace AnimesControl.Api.Controllers
 
         }
         [HttpGet("GetCustomerWithAnimeId/{id}")]
-        public IActionResult GetCustomerWithAnimeId(int id)
+        public IActionResult GetCustomerWithAnimeId(Guid id)
         {
             try
             {

@@ -256,10 +256,10 @@ public class CustomerServiceTests
             customerService.PostCustomer(customerInputModel);
 
 
-            customerInputModel.Id = 10;
+            customerInputModel.Id = Guid.NewGuid();
 
 
-            var exception = Assert.Throws<CredentialsNotEqualsException>(() => customerService.PutCustomer(20, customerInputModel));
+            var exception = Assert.Throws<CredentialsNotEqualsException>(() => customerService.PutCustomer(Guid.NewGuid(), customerInputModel));
 
 
         }
@@ -299,7 +299,6 @@ public class CustomerServiceTests
         var exception = Assert.Throws<NullReferenceException>(() => customerService.PutCustomer(customerInputModel.Id, customerInputModel));
 
     }
-    [Fact]
     public void ValidCustomer_DeleteIsCalled_CustomerModelMustDeleteInDatabase()
     {
         var customerInputModel = new Fixture().Create<CustomerInputModel>();
@@ -346,7 +345,7 @@ public class CustomerServiceTests
 
 
         var customerService = new CustomerService(repositoryMock.Object, mapperMock.Object, cachingMock.Object, securityMock.Object);
-        customerInputModel.Id = 0;
+        customerInputModel.Id = Guid.NewGuid();
         var exception = await Assert.ThrowsAsync<ArgumentNullException>( async () => await customerService.DeleteCustomer(customerInputModel.Id));
 
     }

@@ -17,17 +17,17 @@ namespace AnimesControl.Infra.Repositories
             this.context = context;
         }
 
-        public bool AnimeExists(int id)
+        public bool AnimeExists(Guid id)
         {
 
-            var exist = context.Anime.AsNoTracking().Where(a => a.Id == id).Any();
+            var exist = context.Anime.AsNoTracking().Any(a => a.Id.Equals(id));
             return exist;
         }
 
         public void DeleteAnime(Anime animeDetails)
         {
 
-            var anime = context.Anime.Where(a => a.Id == animeDetails.Id).FirstOrDefault();
+            var anime = context.Anime.Where(a => a.Id.Equals(animeDetails.Id)).FirstOrDefault();
             if (anime == null) throw new NullReferenceException();
             context.Entry(anime).State = EntityState.Deleted;
             context.SaveChanges();
@@ -39,11 +39,10 @@ namespace AnimesControl.Infra.Repositories
             return await context.Anime.ToListAsync();
         }
 
-        public async Task<Anime> GetByIdAnimeDetails(int? id)
+        public async Task<Anime> GetByIdAnimeDetails(Guid id)
         {
-            var anime = await context.Anime.AsNoTracking().FirstOrDefaultAsync(e => e.Id == id);
-            if (anime == null) throw new NullReferenceException();
-            return anime;
+            var anime = await context.Anime.Where(a => a.Id.Equals(id)).Include(a => a.Anime_Customer).FirstOrDefaultAsync();
+            return anime != null ? anime : throw new NullReferenceException();    
         }
 
         public void PostAnime(Anime animeDetails)
@@ -55,7 +54,7 @@ namespace AnimesControl.Infra.Repositories
 
         public void PutAnime(Anime animeDetails)
         {
-            var anime = context.Anime.Where(a => a.Id == animeDetails.Id);
+            var anime = context.Anime.Where(a => a.Id.Equals(animeDetails.Id));
             context.Entry(anime).CurrentValues.SetValues(animeDetails);
             context.SaveChanges();
         }

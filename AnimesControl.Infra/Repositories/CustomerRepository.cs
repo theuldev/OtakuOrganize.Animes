@@ -23,10 +23,10 @@ namespace AnimesControl.Infra.Repositories
             return await context.Customers.ToListAsync();
         }
 
-        public async Task<Customer> GetByIdCustomer(int? id)
+        public async Task<Customer> GetByIdCustomer(Guid id)
         {
-            var customer = await context.Customers.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
-            if (customer == null) throw new NullReferenceException();
+            var customer = await context.Customers.Where(c => c.Id == id).Include(c => c.User).FirstOrDefaultAsync();
+
             return customer;
         }
 
@@ -38,16 +38,15 @@ namespace AnimesControl.Infra.Repositories
 
         public void PutCustomer(Customer customer)
         {
-            var customerData = context.Customers.Where(c => c.Id == customer.Id).FirstOrDefault();
-            if (customerData == null) throw new NullReferenceException();
-            context.Entry(customerData).CurrentValues.SetValues(customer);
+            var customerFilterbyId = GetByIdCustomer(customer.Id);
+            context.Entry(customerFilterbyId.Result).CurrentValues.SetValues(customer);
             context.SaveChanges();
         }
 
         public void DeleteCustomer(Customer customerDetails)
         {
 
-            var customer = context.Customers.Where(c => c.Id == customerDetails.Id).FirstOrDefault();
+            var customer = context.Customers.Where(c => c.Id.Equals(customerDetails.Id)).FirstOrDefault();
             if(customer == null) throw new NullReferenceException();
             context.Entry(customer).State = EntityState.Deleted;
             context.SaveChanges();
@@ -58,6 +57,7 @@ namespace AnimesControl.Infra.Repositories
         {
             context.Anime_Customer.Add(anime_Customer);
             context.SaveChanges();
+
         }
 
     }

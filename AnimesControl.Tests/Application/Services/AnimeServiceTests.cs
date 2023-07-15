@@ -80,7 +80,7 @@ public class AnimeServiceTests
     
     public void ValidAnime_PutIsCalled_AnimeModelMustUpdateInDatabase()
     {
-        var id = new Random().Next();
+        var id = Guid.NewGuid();
         var animeInputModel = new Fixture().Create<AnimeInputModel>();
         animeInputModel.Id = id;
         animeInputModel.Title = "Chainsaw Man";
@@ -135,8 +135,7 @@ public class AnimeServiceTests
     public void InvalidAnime_PutIsCalled_ThrowAnNullReferenceException()
     {
         var animeInputModel = new Fixture().Create<AnimeInputModel>();
-        Random random = new Random();
-        animeInputModel.Id = 1;
+        animeInputModel.Id = Guid.NewGuid();
         animeInputModel.Title = "Chainsaw Man";
         animeInputModel.Details = "Motoserra faz ran dan";
         animeInputModel.Category = 1;
@@ -158,14 +157,14 @@ public class AnimeServiceTests
 
             animeService.PostAnime(animeInputModel);
 
-            animeInputModel.Id = 1;
+            animeInputModel.Id = Guid.NewGuid();
             animeInputModel.Title = "One piece";
             animeInputModel.Details = "Dos Piratas";
             animeInputModel.Category = 2;
 
 
 
-            Assert.Throws<CredentialsNotEqualsException>(() => animeService.PutAnime(random.Next(10), animeInputModel));
+            Assert.Throws<CredentialsNotEqualsException>(() => animeService.PutAnime(Guid.NewGuid(), animeInputModel));
         }
     }
 
@@ -174,9 +173,8 @@ public class AnimeServiceTests
     {
 
         var animeInputModel = new Fixture().Create<AnimeInputModel>();
-        Random random = new Random();
-        var id = random.Next(2, 10);
-        animeInputModel.Id = 1;
+        var id = Guid.NewGuid();
+        animeInputModel.Id = Guid.NewGuid();
         animeInputModel.Title = "Chainsaw Man";
         animeInputModel.Details = "Motoserra faz ran dan";
         animeInputModel.Category = 1;
@@ -207,14 +205,13 @@ public class AnimeServiceTests
             Assert.Throws<NullReferenceException>(() => animeService.PutAnime(id, animeInputModel));
         }
     }
-    [Fact]
-    
+
     public void ValidAnime_DeleteIsCalled_AnimeModelMustDeletedInDatabase()
     {
 
 
         var anime = new AnimeInputModel();
-        anime.Id = 1;
+        anime.Id = Guid.NewGuid();
         anime.Title = "One piece";
         anime.Details = "Dos Piratas";
         anime.Category = 2;
@@ -321,9 +318,8 @@ public class AnimeServiceTests
     
     public void ValidAnime_GetByIdIsCalled_ReturnValidAnimeViewModel()
     {
-        var id = new Random().Next();
         var animeInputModel = new Fixture().Create<AnimeInputModel>();
-        animeInputModel.Id = id;
+        animeInputModel.Id = Guid.NewGuid();
         animeInputModel.Title = "Chainsaw Man";
         animeInputModel.Details = "Motoserra faz ran dan";
         animeInputModel.Category = 1;

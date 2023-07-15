@@ -12,10 +12,10 @@ namespace AnimesControl.Application.Common.Interfaces.Services
     public interface ICustomerService
     {
         Task<IEnumerable<CustomerViewModel>> GetCustomers();
-        Task<CustomerViewModel> GetByIdCustomer(int? id);
+        Task<CustomerViewModel> GetByIdCustomer(Guid id);
         void PostCustomer(CustomerInputModel customer);
-        Task DeleteCustomer(int? id);
-        void PutCustomer(int? id, CustomerInputModel customer);
+        Task DeleteCustomer(Guid id);
+        void PutCustomer(Guid id, CustomerInputModel customer);
 
     }
 }

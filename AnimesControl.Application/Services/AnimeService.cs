@@ -24,7 +24,7 @@ namespace AnimesControl.Application.Services
             cachingService = _cachingService;
         }
 
-        public async void DeleteAnime(int id)
+        public async void DeleteAnime(Guid id)
         {
             var anime = await repository.GetByIdAnimeDetails(id);
             if (anime == null) throw new NullReferenceException();
@@ -41,7 +41,7 @@ namespace AnimesControl.Application.Services
             return animeMap.OrderBy(sp => sp.Id);
         }
 
-        public async Task<AnimeViewModel> GetByIdAnimeDetails(int? id)
+        public async Task<AnimeViewModel> GetByIdAnimeDetails(Guid id)
         {
             if (id == null) throw new ArgumentNullException();
 
@@ -71,7 +71,7 @@ namespace AnimesControl.Application.Services
             repository.PostAnime(animeMap);
         }
 
-        public void PutAnime(int id, AnimeInputModel animeDetails)
+        public void PutAnime(Guid id, AnimeInputModel animeDetails)
         { 
 
             if (!animeDetails.Id.Equals(id)) throw new CredentialsNotEqualsException();

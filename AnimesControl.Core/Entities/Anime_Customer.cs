@@ -10,9 +10,9 @@ namespace AnimesControl.Core.Entities
     {
     
         public int Id { get; set; }
-        public int AnimeId { get; set; }
+        public Guid AnimeId { get; set; }
         public Anime Anime { get; set; }
-        public int CustomerId { get; set; }
+        public Guid CustomerId { get; set; }
         public Customer Customer { get; set; }
 
     }

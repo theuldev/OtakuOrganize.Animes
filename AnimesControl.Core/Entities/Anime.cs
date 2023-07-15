@@ -9,7 +9,7 @@ namespace AnimesControl.Core.Entities
     public class Anime
     {
 
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Details { get; set; }
         public int Category { get; set; }

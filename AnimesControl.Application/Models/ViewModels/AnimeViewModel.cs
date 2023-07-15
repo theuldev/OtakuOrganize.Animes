@@ -8,7 +8,7 @@ namespace AnimesControl.Application.Models.ViewModels
 {
     public class AnimeViewModel
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Details { get; set; }
         public int Category { get; set; }

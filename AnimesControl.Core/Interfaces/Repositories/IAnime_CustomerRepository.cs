@@ -10,8 +10,10 @@ namespace AnimesControl.Core.Interfaces.Repostories
     public interface IAnime_CustomerRepository
     {
         void AddAnime_Customer(Anime_Customer anime_Customer);
-        Task<List<Anime_Customer>> GetCustomersWithAnimeId(int? animeId);
-        Task<List<Anime_Customer>> GetAnimesWithCustomerId(int? customerId);
+        Task<List<Anime_Customer>> GetCustomersWithAnimeId(Guid? animeId);
+        Task<List<Anime_Customer>> GetAnimesWithCustomerId(Guid? customerId);
         void RemoveAnimeCustomer(Anime_Customer anime_Customer);
+
+        Task<bool> ExistAnimeAndCustomer(Guid animeId,Guid customerId);
     }
 }

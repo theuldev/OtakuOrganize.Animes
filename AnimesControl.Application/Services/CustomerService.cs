@@ -1,15 +1,12 @@
-﻿using AnimesControl.Core.Interfaces.Repostories;
-using AnimesControl.Application.Common.Interfaces.Services;
-using AnimesControl.Core.Entities;
-using System.Net.Http.Headers;
-using System.Diagnostics;
-using AutoMapper;
+﻿using AnimesControl.Application.Common.Interfaces.Services;
 using AnimesControl.Application.Models.InputModels;
 using AnimesControl.Application.Models.ViewModels;
-using AnimesControl.Infra.Caching;
-using Newtonsoft.Json;
+using AnimesControl.Core.Entities;
 using AnimesControl.Core.Exceptions;
-using System.Security.Cryptography;
+using AnimesControl.Core.Interfaces.Repostories;
+using AnimesControl.Infra.Caching;
+using AutoMapper;
+using Newtonsoft.Json;
 
 namespace AnimesControl.Application.Services
 {
@@ -19,7 +16,7 @@ namespace AnimesControl.Application.Services
         private readonly IMapper mapper;
         private readonly ICachingService cachingService;
         private readonly ISecurityService securityService;
-        public CustomerService(ICustomerRepository _repository, IMapper _mapper, ICachingService _cachingService,ISecurityService _securityService)
+        public CustomerService(ICustomerRepository _repository, IMapper _mapper, ICachingService _cachingService, ISecurityService _securityService)
         {
             repository = _repository;
             mapper = _mapper;
@@ -27,16 +24,14 @@ namespace AnimesControl.Application.Services
             securityService = _securityService;
         }
 
-
-        public async Task DeleteCustomer(int? id)
+        public async Task DeleteCustomer(Guid id)
         {
             if (id == null) throw new ArgumentNullException();
             var customer = await repository.GetByIdCustomer(id);
-            if (customer == null) throw new NullReferenceException();
             repository.DeleteCustomer(customer);
         }
 
-        public async Task<CustomerViewModel> GetByIdCustomer(int? id)
+        public async Task<CustomerViewModel> GetByIdCustomer(Guid id)
         {
 
             if (id == null) throw new ArgumentNullException();
@@ -68,24 +63,25 @@ namespace AnimesControl.Application.Services
         }
 
         public void PostCustomer(CustomerInputModel customer)
-        { 
+        {
             if (customer == null) throw new ArgumentNullException();
-       
+
             var customerMap = mapper.Map<Customer>(customer);
             repository.PostCustomer(customerMap);
         }
 
-        public void PutCustomer(int? id, CustomerInputModel customer)
+        public void PutCustomer(Guid id, CustomerInputModel customer)
         {
-            if (id == null || customer == null) throw new ArgumentNullException();
+            if (id.Equals(null) || customer == null) throw new ArgumentNullException();
 
-            if(id != customer.Id) throw new CredentialsNotEqualsException();
+
+            if (!customer.Id.Equals(id)) throw new CredentialsNotEqualsException();
 
 
             var customersMap = mapper.Map<Customer>(customer);
             repository.PutCustomer(customersMap);
         }
 
-      
+
     }
 }
