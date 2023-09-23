@@ -1,0 +1,17 @@
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\bin\Debug\net7.0\OtakuOrganize.Infra.deps.json
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\bin\Debug\net7.0\OtakuOrganize.Infra.runtimeconfig.json
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\bin\Debug\net7.0\OtakuOrganize.Infra.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\bin\Debug\net7.0\OtakuOrganize.Infra.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\bin\Debug\net7.0\OtakuOrganize.Core.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\bin\Debug\net7.0\OtakuOrganize.Core.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.csproj.AssemblyReference.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.AssemblyInfoInputs.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.AssemblyInfo.cs
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.csproj.CoreCompileInputs.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.csproj.CopyComplete
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\refint\OtakuOrganize.Infra.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\OtakuOrganize.Infra.genruntimeconfig.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\OtakuOrganize.Infra\obj\Debug\net7.0\ref\OtakuOrganize.Infra.dll

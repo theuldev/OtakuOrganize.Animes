@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtakuOrganize.Api", "OtakuOrganize.Api.csproj", "{4628BE0F-EC74-4093-B651-7518090484B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtakuOrganize.Application", "..\OtakuOrganize.Application\OtakuOrganize.Application.csproj", "{B0019A74-14A4-4194-84E8-111E48767673}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtakuOrganize.Core", "..\OtakuOrganize.Core\OtakuOrganize.Core.csproj", "{DBF3B58D-C937-414D-9623-C0723A93F59A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtakuOrganize.Infra", "..\OtakuOrganize.Infra\OtakuOrganize.Infra.csproj", "{7508AD9B-02C8-4DF2-AC70-B3AEEE87C9CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtakuOrganize.Tests", "..\OtakuOrganize.Tests\OtakuOrganize.Tests.csproj", "{E83CB556-087F-4E2A-91F6-C3C7BC37C789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4628BE0F-EC74-4093-B651-7518090484B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4628BE0F-EC74-4093-B651-7518090484B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4628BE0F-EC74-4093-B651-7518090484B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4628BE0F-EC74-4093-B651-7518090484B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0019A74-14A4-4194-84E8-111E48767673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0019A74-14A4-4194-84E8-111E48767673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0019A74-14A4-4194-84E8-111E48767673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0019A74-14A4-4194-84E8-111E48767673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF3B58D-C937-414D-9623-C0723A93F59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF3B58D-C937-414D-9623-C0723A93F59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF3B58D-C937-414D-9623-C0723A93F59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF3B58D-C937-414D-9623-C0723A93F59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7508AD9B-02C8-4DF2-AC70-B3AEEE87C9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7508AD9B-02C8-4DF2-AC70-B3AEEE87C9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7508AD9B-02C8-4DF2-AC70-B3AEEE87C9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7508AD9B-02C8-4DF2-AC70-B3AEEE87C9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E83CB556-087F-4E2A-91F6-C3C7BC37C789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83CB556-087F-4E2A-91F6-C3C7BC37C789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83CB556-087F-4E2A-91F6-C3C7BC37C789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83CB556-087F-4E2A-91F6-C3C7BC37C789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA972F45-5794-468B-A71C-77970449E818}
+	EndGlobalSection
+EndGlobal

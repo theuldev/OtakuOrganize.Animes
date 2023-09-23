@@ -1,0 +1,17 @@
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\bin\Debug\net7.0\AnimesControl.Infra.deps.json
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\bin\Debug\net7.0\AnimesControl.Infra.runtimeconfig.json
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\bin\Debug\net7.0\AnimesControl.Infra.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\bin\Debug\net7.0\AnimesControl.Infra.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\bin\Debug\net7.0\AnimesControl.Core.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\bin\Debug\net7.0\AnimesControl.Core.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.csproj.AssemblyReference.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.AssemblyInfoInputs.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.AssemblyInfo.cs
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.csproj.CoreCompileInputs.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.csproj.CopyComplete
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\refint\AnimesControl.Infra.dll
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.pdb
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\AnimesControl.Infra.genruntimeconfig.cache
+C:\Users\mathe\source\repos\AnimesControl\AnimesControl.BackEnd\AnimesControl.Infra\obj\Debug\net7.0\ref\AnimesControl.Infra.dll
